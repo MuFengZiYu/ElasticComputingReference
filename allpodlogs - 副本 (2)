@@ -1,0 +1,12 @@
+/var/lib/docker/containers/9f61e6156fe4bf1fda4be21434cad673f1fb3bfbafe0ca35345130a665c25414/9f61e6156fe4bf1fda4be21434cad673f1fb3bfbafe0ca35345130a665c25414-json.log
+{
+    rotate 5
+    copytruncate
+    missingok
+    notifempty
+    compress
+    hourly
+    dateext
+    dateformat -%Y%m%d-%s
+    create 0644 root root
+}

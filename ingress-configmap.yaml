@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configuration
+  namespace: ingress-nginx
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+data:
+  proxy-connect-timeout: "10"
+  proxy-read-timeout: "10"
+  proxy-send-timeout: "10"
+  disable-access-log: "false"
+  proxy-next-upstream-tries: "1"
+  load-balance: "round_robin"
+  log-format-stream: 'streamLog --- R-addr=$remote_addr'
+  log-format-upstream: 'AccessLog --- R-addr=$remote_addr --- Time=$time_local --- Body_bytes_send=$body_bytes_sent --- status=$status --- requesttime=$request_time --- upstreamaddr=$upstream_addr ---upstreamlength=$upstream_response_length --- upstreamresponsetime=$upstream_response_time --- reqid=$req_id'
+  http-snippet: |
+    server {
+      listen 18080;
+      location /nginx_status {
+        allow all;
+        stub_status on;
+      }
+    }

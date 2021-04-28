@@ -1,0 +1,2 @@
+CA: failure loading certificate for API server: failed to load certificate: couldn't load the certificate file /etc/kubernetes/pki/apiserver.crt: open /etc/kubernetes/pki/apiserver.crt: no such file or directory
+
