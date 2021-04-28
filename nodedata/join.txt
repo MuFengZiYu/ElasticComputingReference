@@ -1,0 +1,1 @@
+5kk.yqb6z4pd2e55w09c     --discovery-token-ca-cert-hash sha256:813f7a2d15d3a2f4d45f890e2c78c5a6b5fbc4b7914ff0a9e665c7e834261f41i

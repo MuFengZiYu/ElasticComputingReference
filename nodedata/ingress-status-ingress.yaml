@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-status-ingress
+  namespace: ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: myrubis.czc
+    http:
+      paths:
+      - path: /nginx_status
+        backend:
+          serviceName: ingress-status-service
+          servicePort: 30007
