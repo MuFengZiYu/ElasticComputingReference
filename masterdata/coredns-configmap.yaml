@@ -1,0 +1,41 @@
+apiVersion: v1
+data:
+  Corefile: |
+    .:53 {
+        errors
+        health {
+           lameduck 5s
+        }
+        ready
+        kubernetes cluster.local in-addr.arpa ip6.arpa {
+           pods insecure
+           fallthrough in-addr.arpa ip6.arpa
+           ttl 30
+        }
+        prometheus :9153
+        forward . /etc/resolv.conf
+        cache 30
+        loop
+        reload
+        loadbalance
+    }
+  Hosts: |
+    192.168.1.221 myfibonacci.wh
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-08-18T03:07:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:Corefile: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-08-18T03:07:54Z"
+  name: coredns
+  namespace: kube-system
+  resourceVersion: "210"
+  selfLink: /api/v1/namespaces/kube-system/configmaps/coredns
+  uid: e8c31c0d-2b03-4108-a74f-e5b960a0070c

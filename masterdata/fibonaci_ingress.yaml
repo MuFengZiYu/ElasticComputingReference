@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: rubis-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+  - host: myfibonacci.wh
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: rubis-service
+          servicePort: 80

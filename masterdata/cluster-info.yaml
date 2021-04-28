@@ -1,0 +1,41 @@
+apiVersion: v1
+data:
+  jws-kubeconfig-56s5kk: eyJhbGciOiJIUzI1NiIsImtpZCI6IjU2czVrayJ9..fPIF5tEwXHEoyrW1EgavgDvZfBV5Kfdg1BQl2iduaYw
+  kubeconfig: |
+    apiVersion: v1
+    clusters:
+    - cluster:
+        certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EWXlNakExTWpBd05Wb1hEVE13TURZeU1EQTFNakF3TlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS3JZCkRMaWR2a2d5MWxQcW9IMHZIRzJuZFZQUmtNWnhndlBZcS9Va1hOOFNSZllNOHNKUjQ4NjNUdi9KdG5xaEZtdE8KVTA5OEYwd1N2b0dITHNEY1NpUWExemFOaUlrblVtSjBVS3FsV2lpN2dsUGNsU0NLREdxTEN3WWVGWExWT09OMgp4REI0ZDlvbS9URDRMY2RpNDB3Rkl2VlNONCt0U01iM0xLWXl4eENMR3RkR3NaSGpnL0o0Qnp5UkwzeTNURmJtCmV6dVlqeExXQjNmaTRrMkJBamhvRnpoZWJaYmRLUWtrdlozSVlPWTdlc25ZNVZETUJEcjZHSTd2ZUVUaCtKYWUKdDNpc1J1NmVDRmFFQ3dHSnhzanFaRWdHd0JiVGVxMDNUTEcrSUNjbE1VODc1OStkZWFYMnVjZjFnb0xXN25OMwpnb1dBY1BUeW94OEdXMkJqNU9jQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFJM2dycUFCb0Vua3BXVlk0U3EwQVUrckxVdjQKd1pnS2ZXMG54M0hOTmdaaUhpVWoyT01GUUtuNmxlc0NzeGw2OUpibTJyN0ZnME14d2NRa2wwSWM1ME42QWhiRQpCcUVQemFrYzVpbXVRRVdQL1hSQ1BmSW5SYTV3WTczYmRBSmV4RUt4RUhDUzlzM3R1U0xWcit1UW5XNExiejV3CnZyZTFNZmpRS2s3cml5UzRUWE80cU83azVyU0RrOVM4N1NiOVNxV1J5QXJlWjNFSVZMOElJOFllRGZSd2xLQ0gKalBoRUlrZ0JzSUdCVmtzWFJCY0pHQmprcG9IRldJOGVPbzlYVVNyK09GczUwbTZWajE3VnRGakhXOE5qL2pFWQpqaGNHOWxGOE1iNGtOMEJ2c1dhREFQQS9oM1JzcmVmZHl2czJYTU9ZYTlWL3FjV2ZXb3lJSG9CRkc0VT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+        server: https://192.168.1.220:6443
+      name: ""
+    contexts: null
+    current-context: ""
+    kind: Config
+    preferences: {}
+    users: null
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-06-22T05:20:28Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:kubeconfig: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-06-22T05:20:28Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:jws-kubeconfig-56s5kk: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2020-08-17T11:20:46Z"
+  name: cluster-info
+  namespace: kube-public
+  resourceVersion: "8334268"
+  selfLink: /api/v1/namespaces/kube-public/configmaps/cluster-info
+  uid: 7866387f-987f-4cd8-afe5-e90de3eec8fe

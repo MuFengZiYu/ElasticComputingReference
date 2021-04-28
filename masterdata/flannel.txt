@@ -1,0 +1,6 @@
+# 将 yml 文件下载到本地
+[root@localhost ~]# wget https://raw.githubusercontent.com/coreos/flannel/2140ac876ef134e0ed5af15c65e414cf26827915/Documentation/kube-flannel.yml
+# 打开文件，将文件中所有 quay.io 修改为 quay-mirror.qiniu.com (https://blog.csdn.net/zsd498537806/article/details/85157560)
+
+# 最后拉取镜像
+[root@localhost ~]# kubectl apply -f kube-flannel.yml
